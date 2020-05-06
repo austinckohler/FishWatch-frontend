@@ -43,8 +43,16 @@
             cardContainer.append(fishCard)
             fishCard.append(fishPhoto, fishLink)
            
+            function searchFish(fishinfo) { 
+                const $li = createElement("li")
+                $li.innerHTML = `<a href=show.html?id=${fish.id}>${fish.species_name}</a>`
+                fishinfo.append($li)
+            }  
+
         })
     }
+
+   
 
     // let fishUrl;
     // const queryParams = new URLSearchParams(window.location.search);

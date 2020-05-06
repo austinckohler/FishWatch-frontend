@@ -136,7 +136,7 @@ a:active {
     color: rgb(238, 161, 59);
 }
 
-form {
+/* form {
     display: flex;
     flex-direction: row;
     width: 300px;
@@ -153,7 +153,7 @@ input[type=text] {
 .submit-button {
     border: 1px solid grey;
     width: 100px;
- } 
+ }  */
 
  #species-name-show {
      margin: auto;
@@ -192,3 +192,143 @@ input[type=text] {
     background-repeat: no-repeat;
     background-size: cover;
  }
+
+
+
+ /* Create FISH */
+ form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 50px;
+    padding: 10px;
+   
+} 
+
+.space {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 194px;
+    height: 1px;
+    padding: 8px;
+    font-size: small;
+    margin-right: 26px;
+    
+} 
+
+.create-fish {
+    border: 2px solid #00B4CC;
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    border-radius: 6px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 194px;
+    height: 3px;
+    padding: 8px;
+    font-size: small;
+    margin-right: -2px;
+    padding: 12px;
+    
+} 
+
+.fish-input {
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 10px;
+    padding: 5px;
+    
+} 
+
+/* Submit Button*/
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 213px;
+    height: 26px;
+    border-radius: 6px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    border: solid 1px transparent;
+    color: #fff;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 10px;
+    font-weight: 300;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 18px;
+    
+  }
+.submit-button {
+    background: #00B4CC;
+    font-size: 10px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 22px;
+    
+} 
+
+/* Search Bar */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
