@@ -64,7 +64,6 @@ table {
 } 
 /* End of Reset */
 
-
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -90,11 +89,17 @@ p {
 	margin: 1em;
 }
 
+div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 #card-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 25%;
+    width: 70%;
     /* border: 1px outset black; */
     margin: 5px;
     text-align: center;
@@ -124,7 +129,7 @@ img {
     justify-content: center;
 } */
 
-/* form {
+/form {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -135,4 +140,4 @@ img {
 .submit-button {
     border: 1px solid grey;
     width: 100px;
-} */
+}
