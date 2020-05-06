@@ -77,17 +77,17 @@ h2 {
     font-size: 28px;
 }
 
-p {text-align: center;
-	padding: 18px;
-	
+p {
+    text-align: center;
+	padding: 18px;	
 }
 
-#card-container {
-    width: 300px;
-    border: 1px outset blue;
+/* .card-container {
+    width: 900px;
+    border: 1px outset rgb(0, 153, 255);
     margin: 5px;
     text-align: center;
-}
+} */
 
 img {
     padding-top: 25px;
@@ -98,18 +98,30 @@ img {
 .fish-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
-/* form {
+form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
     width: 300px;
     padding: 10px;
-    padding-bottom: 25px;
-}
+   
+} 
+
+.fish-input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 300px;
+    padding: 10px;
+    
+} 
 
 .submit-button {
     border: 1px solid grey;
-    width: 100px;
-} */
+    width: 300px;
+    height: 28px;
+} 

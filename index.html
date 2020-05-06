@@ -8,10 +8,41 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to our app</h1>
-    <h2>Species</h2>
+    <h1>Find a Fish!</h1>
+    <h2>Diverse Fish Species</h2>
+    <h3>Enter a New Fish Species Here</h3>
 
-    <section id = "card-container">
+    <form method="POST" action="http://localhost:3000/fish">
+        <div class="create-fish">
+            <label for="species_name">Species Name</label>
+            <input type="text" class="create-fish" name="species_name" id="species_name">
+        </div>
+        <div class="create-fish">
+            <label for="scientific_name">Scientific Name</label>
+            <input type="text" class="create-fish" name="scientific_name" id="scientific_name">
+        </div>
+        <div class="create-fish">
+            <label for="Habitat">Habitat</label>
+            <input type="text" name="habitat" class="create-fish" id="Habitat">
+        </div>
+        <div class="create-fish">
+            <label for="Location">Location</label>
+            <input type="text" name="location" class="create-fish" id="Location">
+        </div>
+        <div class="create-fish">
+            <label for="Species Illustration Photo">Image URL:</label>
+            <input type="text" class="create-fish" id="Species Illustration Photo" name="species_illustration_photo">
+        </div>
+        <input type="submit" class="submit-button"/>
+        </form>
+
+        </form>
+        <form action="http://localhost:3001/fish" method="GET">  
+        <input  name="search" placeholder="Find a Fish" id="searchbar"> 
+        <input  type="submit" value="Search">
+        </form> 
+
+    <section class="card-container">
         </section>
        
         
