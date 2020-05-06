@@ -14,29 +14,40 @@ else {
 fetch(fishUrl)
     .then(response => response.json())
     .then(displayFish)
-
-function displayFish(fishinfo) {
-    console.log(fishinfo)
-    fishinfo.forEach(fish => {
-        const cardContainer = document.querySelector(".card-container")
-        const species_illustration_photo = document.createElement('img')
-
-        cardContainer.innerHTML = cardContainer.innerHTML + `<a href=show.html?id=${fish.id}><button>${fish.species_name}</button></a>`
-
-        if (fish.species_illustration_photo) {
-        species_illustration_photo.src = fish.species_illustration_photo
-        } else {
-            // noImage.textContent = 'No image available'
-        }
-
-        searchFish(fish)
+    function displayFish(fishinfo) {
+        const cardContainer = document.querySelector("#card-container")
         
-        cardContainer.append(species_illustration_photo)
-    })
-}
+        fishinfo.forEach(fish => {
+            const fishCard = document.createElement("div")
+            const fishPhoto = document.createElement('img')
+            const fishLink = document.createElement("a")
 
-function searchFish(fish) { 
-    const $li = createElement("li")
-    $li.innerHTML = `<a href=show.html?id=${fish.id}><button>${fish.species_name}</button></a>`
-    cardContainer.append($li)
-    }  
+            fishLink.innerHTML = `<a href=show.html?id=${fish.id}>${fish.species_name}</a>`
+            
+
+            if (fish.species_illustration_photo) {
+                fishPhoto.src = fish.species_illustration_photo
+            } else {
+               const noImage = document.createElement("p") 
+               noImage.innerText = 'No image available'
+               fishCard.append(noImage)
+            }
+
+        
+            cardContainer.append(fishCard)
+            fishCard.append(fishPhoto, fishLink)
+
+            // const fishCardHolder = document.querySelector("div");
+            //     fishCardHolder.classList.add("fishcard");
+
+        function searchFish(fishinfo) { 
+            const $li = createElement("li")
+            $li.innerHTML = `<a href=show.html?id=${fish.id}>${fish.species_name}</a>`
+            fishinfo.append($li)
+        }  
+    
+           
+        })
+    }
+
+    
