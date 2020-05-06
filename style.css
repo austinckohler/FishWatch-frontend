@@ -11,6 +11,12 @@ h1 {
    License: none (public domain)
 */
 
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html, body, div, span, applet, object, iframe,
@@ -33,7 +39,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 } 
-*/HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers */ 
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -66,40 +72,57 @@ body {
     align-items: center;
 }
 
+
 h1 {
 	font-size: 48px;
 	text-align: center;
-    padding-bottom: 24px;
+    padding-bottom: 18px;
 	font-weight: bold;
 }
 
 h2 {
     font-size: 28px;
+    padding: 18px;
 }
 
-p {text-align: center;
-	padding: 18px;
-	
+p { 
+    line-height: 2em;
+	margin: 1em;
 }
 
 #card-container {
-    width: 300px;
-    border: 1px outset blue;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 25%;
+    /* border: 1px outset black; */
     margin: 5px;
     text-align: center;
 }
 
-img {
-    padding-top: 25px;
-    padding: 10px;
-    width: 200px;
+
+a:hover {
+   background: rgba(128, 128, 128, 0.24); 
+}
+nav {
+    float: left;
 }
 
-.fish-container {
+img {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    padding-top: 25px;
+    padding: 1em;
+    width: 70%;
+    /* border: 1px solid black; */
 }
+
+/* .fish-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} */
 
 /* form {
     display: flex;

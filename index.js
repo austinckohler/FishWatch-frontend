@@ -2,19 +2,32 @@ fetch("http://localhost:3000/fish")
 .then(response => response.json())
 .then(displayFish)
 
-    function displayFish(fishinfo) {
-        fishinfo.forEach(fish => {
-            const cardContainer = document.querySelector("#card-container")
-            const species_illustration_photo = document.createElement('img')
 
-            cardContainer.innerHTML = cardContainer.innerHTML + `<a href=show.html?id=${fish.id}<button>${fish.species_name}</button></a>`
+    function displayFish(fishinfo) {
+        const cardContainer = document.querySelector("#card-container")
+        
+        fishinfo.forEach(fish => {
+            const fishCard = document.createElement("div")
+            const fishPhoto = document.createElement('img')
+            const fishLink = document.createElement("a")
+
+            fishLink.innerHTML = `<a href=show.html?id=${fish.id}>${fish.species_name}</a>`
+            
 
             if (fish.species_illustration_photo) {
-            species_illustration_photo.src = fish.species_illustration_photo
+                fishPhoto.src = fish.species_illustration_photo
             } else {
-                noImage.textContent = 'No image available'
+               const noImage = document.createElement("p") 
+               noImage.innerText = 'No image available'
+               fishCard.append(noImage)
             }
-           cardContainer.append(species_illustration_photo)
+
+            // const fishCardHolder = document.querySelector("div")
+            //     fishCardHolder.classList.add("fishcard")
+        
+            cardContainer.append(fishCard)
+            fishCard.append(fishPhoto, fishLink)
+           
         })
     }
 
@@ -28,3 +41,5 @@ fetch("http://localhost:3000/fish")
     //         p.innerHTML = fish.habitat
     //         document.body.append(h5, species_illustration_photo, p)
     //        
+
+    // document.querySelector("#cards")
