@@ -1,10 +1,4 @@
-/* body {
-    background-color: antiquewhite;
-}
 
-h1 {
-    text-align: center;
-} */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -12,14 +6,9 @@ h1 {
 */
 
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-html, body, div, span, applet, object, iframe,
+/*html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -38,9 +27,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-} 
+}  */
 /* HTML5 display-role reset for older browsers */ 
-article, aside, details, figcaption, figure, 
+/* article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -61,16 +50,21 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-} 
+}  */
 /* End of Reset */
+
+
+nav {
+    float: left;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+	max-width:1024px;
+	margin: 0 auto;
+	height: 100%;
 }
-
 
 h1 {
 	font-size: 48px;
@@ -82,62 +76,119 @@ h1 {
 h2 {
     font-size: 28px;
     padding: 18px;
+    text-align: center;
+    margin: auto;
+}
+
+h3 {
+    margin: 1.5em;
 }
 
 p { 
-    line-height: 2em;
-	margin: 1em;
-}
-
-div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    line-height: 1.5em;
+	margin: 1.5em;
 }
 
 #card-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 70%;
-    /* border: 1px outset black; */
+    width: 90%;
+    height: 100%;
     margin: 5px;
     text-align: center;
+    margin: auto;
 }
 
+.fish-cards {
+    width: 20%;
+    margin: auto;
+    padding: 3.5%;
+    justify-content: center;
+}
+
+/* IMAGES WITH IN CARDS */
+.fish-cards > img {
+    width: 100%;
+    opacity: .8;
+}
+
+img:hover {
+    opacity: 1;
+}
+
+ /* LINK SELECTORS */
+a:link{
+    color: rgba(12, 2, 2, 0.623);
+    text-decoration: none;
+    font-size: large;
+}
+
+a:visited {
+    color: black;
+}
 
 a:hover {
-   background: rgba(128, 128, 128, 0.24); 
-}
-nav {
-    float: left;
+   background: rgba(128, 128, 128, 0.103); 
 }
 
-img {
+a:active {
+    color: rgb(238, 161, 59);
+}
+
+form {
     display: flex;
     flex-direction: row;
-    margin: auto;
-    padding-top: 25px;
-    padding: 1em;
-    width: 70%;
-    /* border: 1px solid black; */
-}
-
-/* .fish-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-} */
-
-/form {
-    display: flex;
-    flex-direction: column;
     width: 300px;
-    padding: 10px;
+    padding: 20px;
     padding-bottom: 25px;
-}
+} 
+
+input[type=text] {
+    border: black solid 1px;
+    padding: 5%;
+    text-align: center;
+  }
 
 .submit-button {
     border: 1px solid grey;
     width: 100px;
-}
+ } 
+
+ #species-name-show {
+     margin: auto;
+     text-shadow: gold;
+ }
+
+ #scientific-name {
+    font-style: italic;
+ }
+
+
+ #habitat, #location {
+     line-height: 1.5em;
+     margin: 3em;
+     /* background-color: lightcyan;
+     opacity: 2; */
+ }
+
+ .show-page {
+    width: 100%;
+	max-width:1024px;
+	margin: 0 auto;
+	height: 100%;
+    background: url(https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=881&q=80) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+ .fish-container {
+     /* color: rgb(156, 83, 83);
+     text-shadow: rgb(233, 173, 173); */
+ }
+
+ .home-page {
+    background: url(https://images.unsplash.com/photo-1440227537815-f4476b789291?ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }

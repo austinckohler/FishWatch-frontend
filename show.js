@@ -11,15 +11,19 @@ fetch(`http://localhost:3000/fish/${id}`)
         const fishContainer = document.querySelector('.fish-container')
         // const card = document.createElement('div')
         const h2 = document.createElement('h2')
+        h2.id = "species-name-show"
         const h3 = document.createElement('h3')
-        const habitat = document.createElement('p')
-        const location = document.createElement('p')
+        h3.id = "scientific-name"
+        const habitat = document.createElement('h5')
+        habitat.id = "habitat"
+        const location = document.createElement('h5')
+        location.id = "location"
 
         // card.className = 'fish-card'
         h2.innerText = fish.species_name
         h3.innerText = fish.scientific_name
-        habitat.innerHTML = fish.habitat
-        location.innerHTML = fish.location
+        habitat.innerHTML = "Habitat:" + fish.habitat
+        location.innerHTML = "Location:" + fish.location
         
         fishContainer.append(h2, h3, habitat, location)
     }

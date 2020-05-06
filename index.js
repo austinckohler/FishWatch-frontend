@@ -25,6 +25,7 @@
         
         fishinfo.forEach(fish => {
             const fishCard = document.createElement("div")
+            fishCard.className = 'fish-cards'
             const fishPhoto = document.createElement('img')
             const fishLink = document.createElement("a")
 
@@ -38,9 +39,6 @@
                noImage.innerText = 'No image available'
                fishCard.append(noImage)
             }
-
-            // const fishCardHolder = document.querySelector("div")
-            //     fishCardHolder.classList.add("fishcard")
         
             cardContainer.append(fishCard)
             fishCard.append(fishPhoto, fishLink)

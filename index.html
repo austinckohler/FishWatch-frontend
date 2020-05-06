@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
 </head>
-<body>
+<body class="home-page">
     <h1><strong>Find a Fish!</strong></h1>
-    <p>Find a Fish, is a web application designed to allow users to find a species of salt water fish. Users can browse the home page in to find a picture of a fish they might recognize and click on its name to get more information. Users may also sort the through fish by their ...................
-        We understand fishers may want to get more information about a species such as the location in which they reside or maybe learn more about their habitat. Our goal is to provide users with a more robust fish finding experience. We hope you enjoy!</p>
-    <h2>Species</h2>
+    
+    <p>Find a Fish, is a web application designed to allow users to find a species of salt water fish. </p>
+        
+    <p> Users can browse the home page to find a picture of a fish they might recognize and click its name for information about the species habitat or location. Users also have the ability to search fish by name.</p>
+    
+    <p>With so many species of fish, and some that are not listed, we decided to provide our guest with the "add a fish" feature. In order to sucessfully add a fish you will need to provide: species name, scientific name, habitat, location, and an image URL. </p>
+    
+    <p> Our goal is to provide users with a more robust fish finding experience. Enjoy!</p>
+    <h2>Add a fish or search</h2>
     <form method="POST" action="http://localhost:3000/fish">
         <div class="create-fish">
             <label for="species_name">Species Name</label>
@@ -42,12 +48,12 @@
         <input  type="submit" value="Search">
         </form> 
 
-
+        <h2>Species</h2>
     <section id = "card-container">
       
         
         </section>
        
-        
+ 
 </body>
 </html>
