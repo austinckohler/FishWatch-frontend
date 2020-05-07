@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+
+
 nav {
     float: left;
 }
@@ -15,10 +19,11 @@ body {
 #index-paragraphs {
     color: rgb(197, 252, 197);
     text-shadow: rgba(32, 97, 32, 0.63) 5px;
-    font-weight: 800;
+    font-weight: 1000;
 }
 
 h1 {
+    font-family: 'Acme', sans-serif;
 	font-size: 48px;
 	text-align: center;
     padding-bottom: 18px;
@@ -29,7 +34,8 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
     padding: 18px;
     text-align: center;
     margin: auto;
@@ -39,10 +45,14 @@ h2 {
 }
 
 h3 {
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
     margin: 1.25em;
     color: rgb(197, 252, 197);
     text-shadow: rgba(32, 97, 32, 0.63) 5px;
     font-weight: 800;
+    position: absolute;
+    top: 255px;
 }
 
 p { 
@@ -125,7 +135,11 @@ a:active {
  #habitat, #location {
      line-height: 1.5em;
      margin: 3em;
-     /* background-color: lightcyan;
+     color:black;
+     font-weight: 500;
+     font-size: large;
+     font-family: 'Acme', sans-serif;
+     /* background-color: black;
      opacity: 2; */
  }
 
@@ -134,7 +148,7 @@ a:active {
 	max-width:1024px;
 	margin: 0 auto;
 	height: 100%;
-    background: url(https://images.unsplash.com/photo-1488953994029-e6a7ba3348f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80) center;
+    background: url(https://images.unsplash.com/photo-1488953994029-e6a7ba3348f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80) ;
     background-repeat: no-repeat;
     background-size: cover;
  }
@@ -166,6 +180,7 @@ a:active {
     padding: 8px;
     font-size: small;
     margin-right: -2px;
+    margin-bottom: 6px;
     padding: 12px;
 } 
 
@@ -196,10 +211,12 @@ a:active {
 
 .submit-button {
     background: #00B4CC;
-    font-weight: 300;
+    font-weight: 500;
     color: #fff;
     line-height: 22px;
     border: solid 1px transparent;
+    position: relative;
+    right: -79px;
 } 
 
 /* Search Bar */
@@ -216,7 +233,10 @@ a:active {
     flex-direction: column;
     width: 37%;
 	max-width:1024px;
-	margin: 0 auto;
+    margin: 0 auto;
+    position: absolute;
+    left: 39%;
+    top: 50%;
 }
 
 .searchTerm {
@@ -226,6 +246,7 @@ a:active {
     height: 100%;
     text-align: center;
     border-radius: 6px;
+    padding: 7px;
 }
 
 .searchTerm:focus{
@@ -242,6 +263,7 @@ a:active {
     margin: auto;
     margin-top: 10px;
     color: #fff;
+    font-weight: 500;
 }
 
 /*Resize the wrap to see the search bar change!*/
