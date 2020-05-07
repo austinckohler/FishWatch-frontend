@@ -51,22 +51,3 @@
 
         })
     }
-
-   
-
-    // let fishUrl;
-    // const queryParams = new URLSearchParams(window.location.search);
-    // const search = queryParams.get('search');
-    
-    // if(search) {
-    //     fishUrl = `http://localhost:3000/fish?search=${search}`
-    // }
-    // else { 
-    //     fishUrl = "http://localhost:3000/fish"
-    // }
-    
-    
-    
-    // fetch(fishUrl)
-    //     .then(response => response.json())
-    //     .then(displayFish)
