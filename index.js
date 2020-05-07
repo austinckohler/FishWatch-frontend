@@ -1,13 +1,31 @@
-fetch("http://localhost:3000/fish")
-.then(response => response.json())
-.then(displayFish)
+// fetch("http://localhost:3000/fish")
+// .then(response => response.json())
+// .then(displayFish)
 
+
+  let fishUrl;
+    const queryParams = new URLSearchParams(window.location.search);
+    const search = queryParams.get('search');
+    
+    if(search) {
+        fishUrl = `http://localhost:3000/fish?search=${search}`
+    }
+    else { 
+        fishUrl = "http://localhost:3000/fish"
+    }
+    
+    
+    
+    fetch(fishUrl)
+        .then(response => response.json())
+        .then(displayFish)
 
     function displayFish(fishinfo) {
         const cardContainer = document.querySelector("#card-container")
         
         fishinfo.forEach(fish => {
             const fishCard = document.createElement("div")
+            fishCard.className = 'fish-cards'
             const fishPhoto = document.createElement('img')
             const fishLink = document.createElement("a")
 
@@ -21,25 +39,34 @@ fetch("http://localhost:3000/fish")
                noImage.innerText = 'No image available'
                fishCard.append(noImage)
             }
-
-            // const fishCardHolder = document.querySelector("div")
-            //     fishCardHolder.classList.add("fishcard")
         
             cardContainer.append(fishCard)
             fishCard.append(fishPhoto, fishLink)
            
+            function searchFish(fishinfo) { 
+                const $li = createElement("li")
+                $li.innerHTML = `<a href=show.html?id=${fish.id}>${fish.species_name}</a>`
+                fishinfo.append($li)
+            }  
+
         })
     }
 
-    // function displayFishData(fish){
-    //     fish.forEach(fish => {
-    //         const h5 = document.createElement('h5')
-    //         const species_illustration_photo = document.createElement('img')
-    //         const p = document.createElement('p')
-    //         h5.innerHTML = fish.species_name
-    //         species_illustration_photo.innerHTML = fish.species_illustration_photo
-    //         p.innerHTML = fish.habitat
-    //         document.body.append(h5, species_illustration_photo, p)
-    //        
+   
 
-    // document.querySelector("#cards")
+    // let fishUrl;
+    // const queryParams = new URLSearchParams(window.location.search);
+    // const search = queryParams.get('search');
+    
+    // if(search) {
+    //     fishUrl = `http://localhost:3000/fish?search=${search}`
+    // }
+    // else { 
+    //     fishUrl = "http://localhost:3000/fish"
+    // }
+    
+    
+    
+    // fetch(fishUrl)
+    //     .then(response => response.json())
+    //     .then(displayFish)
