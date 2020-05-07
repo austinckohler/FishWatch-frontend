@@ -1,76 +1,31 @@
-
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-/*html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}  */
-/* HTML5 display-role reset for older browsers */ 
-/* article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}  */
-/* End of Reset */
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 nav {
     float: left;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     width: 100%;
 	max-width:1024px;
 	margin: 0 auto;
 	height: 100%;
 }
 
+#index-paragraphs {
+    color: rgb(197, 252, 197);
+    text-shadow: rgba(32, 97, 32, 0.63) 5px;
+    font-weight: 800;
+}
+
 h1 {
 	font-size: 48px;
 	text-align: center;
     padding-bottom: 18px;
-	font-weight: bold;
+    font-weight: bold;
+    color: rgb(197, 252, 197);
+    text-shadow: rgba(32, 97, 32, 0.63) 5px;
+    font-weight: 800;
 }
 
 h2 {
@@ -78,15 +33,22 @@ h2 {
     padding: 18px;
     text-align: center;
     margin: auto;
+    color: rgb(197, 252, 197);
+    text-shadow: rgba(32, 97, 32, 0.63) 5px;
+    font-weight: 800;
 }
 
 h3 {
-    margin: 1.5em;
+    margin: 1.25em;
+    color: rgb(197, 252, 197);
+    text-shadow: rgba(32, 97, 32, 0.63) 5px;
+    font-weight: 800;
 }
 
 p { 
     line-height: 1.5em;
-	margin: 1.5em;
+    margin: 1.5em;
+    
 }
 
 #card-container {
@@ -110,7 +72,7 @@ p {
 /* IMAGES WITH IN CARDS */
 .fish-cards > img {
     width: 100%;
-    opacity: .8;
+    opacity: .7;
 }
 
 img:hover {
@@ -119,41 +81,37 @@ img:hover {
 
  /* LINK SELECTORS */
 a:link{
-    color: rgba(12, 2, 2, 0.623);
+    color: rgb(161, 253, 143);
+    text-shadow:  rgba(161, 253, 143, 0.164) 5%;
     text-decoration: none;
-    font-size: large;
+    font-size: 20px;
 }
 
 a:visited {
-    color: black;
+    color: rgb(255, 167, 5);
+    background-color: rgba(255, 168, 5, 0.555);
 }
 
 a:hover {
-   background: rgba(128, 128, 128, 0.103); 
+   background: rgba(43, 199, 238, 0.103); 
+   color: rgb(238, 161, 59);
 }
 
 a:active {
-    color: rgb(238, 161, 59);
+    color: rgb(10, 195, 252);
 }
-
-/* form {
+/*might use dont delete yet */
+#add-fish {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 300px;
     padding: 20px;
     padding-bottom: 25px;
-} 
-
-input[type=text] {
-    border: black solid 1px;
-    padding: 5%;
-    text-align: center;
-  }
-
-.submit-button {
-    border: 1px solid grey;
-    width: 100px;
- }  */
+    width: 100%;
+	max-width:1024px;
+	margin: 0 auto;
+	height: 100%;
+}  
 
  #species-name-show {
      margin: auto;
@@ -163,7 +121,6 @@ input[type=text] {
  #scientific-name {
     font-style: italic;
  }
-
 
  #habitat, #location {
      line-height: 1.5em;
@@ -182,42 +139,18 @@ input[type=text] {
     background-size: cover;
  }
 
- .fish-container {
-     /* color: rgb(156, 83, 83);
-     text-shadow: rgb(233, 173, 173); */
- }
+ /* .fish-container {
+     color: rgb(156, 83, 83);
+     text-shadow: rgb(233, 173, 173);
+ } */
 
  .home-page {
-    background: url(https://images.unsplash.com/photo-1440227537815-f4476b789291?ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80) center;
+    background: url(https://images.unsplash.com/photo-1488953994029-e6a7ba3348f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80) center;
     background-repeat: no-repeat;
     background-size: cover;
  }
 
-
-
  /* Create FISH */
- form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    width: 50px;
-    padding: 10px;
-   
-} 
-
-.space {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    width: 194px;
-    height: 1px;
-    padding: 8px;
-    font-size: small;
-    margin-right: 26px;
-    
-} 
 
 .create-fish {
     border: 2px solid #00B4CC;
@@ -234,7 +167,6 @@ input[type=text] {
     font-size: small;
     margin-right: -2px;
     padding: 12px;
-    
 } 
 
 .fish-input {
@@ -248,64 +180,52 @@ input[type=text] {
     width: 200px;
     height: 10px;
     padding: 5px;
-    
+    border: solid 1px transparent;
 } 
 
 /* Submit Button*/
 
 .main {
-    position: relative;
-    display: flex;
-    flex-direction: row;
     width: 213px;
-    height: 26px;
     border-radius: 6px;
     border: 1px solid #00B4CC;
     background: #00B4CC;
-    border: solid 1px transparent;
-    color: #fff;
-    padding-left: 9px;
     padding-right: 9px;
-    font-size: 10px;
-    font-weight: 300;
-    cursor: pointer;
     margin-top: 10px;
-    margin-right: 18px;
-    
   }
+
 .submit-button {
     background: #00B4CC;
-    font-size: 10px;
     font-weight: 300;
     color: #fff;
     line-height: 22px;
-    
+    border: solid 1px transparent;
 } 
 
 /* Search Bar */
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body{
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
-}
 
 .search {
-    width: 100%;
-    position: relative;
+    /* width: 100%;
+    position: absolute;
+    top: 47%;
+    height: 17%;
+    display: flex; */
     display: flex;
-  }
+    flex-direction: column;
+    width: 37%;
+	max-width:1024px;
+	margin: 0 auto;
+}
 
 .searchTerm {
-  width: 100%;
-  border: 3px solid #00B4CC;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
+    width: 100%;
+	max-width:1024px;
+	margin: 0 auto;
+    height: 100%;
+    text-align: center;
+    border-radius: 6px;
 }
 
 .searchTerm:focus{
@@ -313,22 +233,20 @@ body{
 }
 
 .searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
+    width: 50%;
+    text-align: center;
+    height: 26px;
+    border-radius: 6px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    margin: auto;
+    margin-top: 10px;
+    color: #fff;
 }
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 30%;
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+
 }
