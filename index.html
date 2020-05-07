@@ -10,53 +10,44 @@
 <body class="home-page">
     <h1><strong>Find a Fish!</strong></h1>
     <div id = "index-paragraphs">
-    <p>Find a Fish, is a web application designed to allow users to find species of salt water fish. Users can browse the home page to find a picture of a fish they might recognize and click its name for information about the species habitat or location. Users also have the ability to search fish by name.
-    With so many species of fish, and some that are not listed, we decided to provide our users with the "add a fish" feature. In order to sucessfully add a fish you will need to provide: species name, scientific name, habitat, location, and an image URL. 
-    Our goal is to provide users with a more robust fish finding experience. Enjoy!</p>
+    <p>Find a Fish, is a web application designed to allow users to find species of salt water fish. Users can browse the home page to find a picture of a fish they might recognize and click its name for information about the species, habitat, or location.</p>
+     
+    <p>Users also have the ability to search fish by name. With so many species of fish, and many that are not listed, we decided to provide our users with the "Enter a New Fish Species" feature. In order to sucessfully add a fish you will need to provide: species name, scientific name, habitat, location, and an image URL. </p>
+
+    <p> Our goal is to provide users with a more robust fish finding experience. Enjoy!</p>
     </div>
     
-    <h3>Enter a New Fish Species Below</h3>
+    <h3>Enter a New Fish Species or Search Below:</h3>
+
     <section id = "add-fish">
-    <form method="POST" action="http://localhost:3000/fish">
-        <div class="space">
-            <input type="text" class="create-fish" name="species_name" id="species_name" placeholder="Species Name">
-        </div>
-        <div class="space">
-            <input type="text" class="create-fish" name="scientific_name" id="scientific_name" placeholder="Scientific Name">
-        </div>
-        <div class="space">
-            <input type="text" name="habitat" class="create-fish" id="Habitat" placeholder="Habitat">
-        </div>
-        <div class="space">
-            <input type="text" name="location" class="create-fish" id="Location" placeholder="Location">
-        </div>
-        <div class="space">
-            <input type="text" class="create-fish" id="Species Illustration Photo" name="species_illustration_photo" placeholder="Image URL">
-        </div>
-        <div class="main">
-            <button class="submit-button">Submit</button>
-              </div>
+        <form method="POST" action="http://localhost:3000/fish">
+                <input type="text" class="create-fish" name="species_name"placeholder="Species Name">
+    
+                <input type="text" class="create-fish" name="scientific_name" placeholder="Scientific Name">
+            
+                <input type="text" name="habitat" class="create-fish" placeholder="Habitat">
+            
+                <input type="text" name="location" class="create-fish" placeholder="Location">
+            
+                <input type="text" class="create-fish" name="species_illustration_photo" placeholder="Image URL">
+          
+                <button>Submit</button>
         </form>
+
+        <form action="http://localhost:3001/fish" method="GET" >  
+                <input type="text" class="create-fish" placeholder="Search" name="search">
+                <button type="submit">Submit
+                    <i class="fa fa-search"></i>
+                </button>
+        </form> 
+
     </section>
 
-
-        </form>
-        <form action="http://localhost:3001/fish" method="GET" class="wrap">  
-                <div class="search">
-                   <input type="text" class="searchTerm" placeholder="Search" name="search">
-                   <button type="submit" class="searchButton">Submit
-                     <i class="fa fa-search"></i>
-                  </button>
-                </div>
-
-        </form> 
-   
         <h2>Diverse Fish Species</h2>
-    <section id = "card-container">
-      
-        
-        </section>
-       
- 
+
+    <section id = "card-container">  </section>
+    <footer> 
+
+    </footer>
 </body>
 </html>
