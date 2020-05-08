@@ -1,4 +1,4 @@
-## FishWatch - Find a Fish! 
+# FishWatch - Find a Fish! 
 
 Find a Fish is a web application that allows users to browse saltwater fish species based on their name and picture. 
 
@@ -31,7 +31,8 @@ View all fish and click the link for a show page
 Create New Fish 
 Search all fish for filtered results
 
-# Stretch Goal 
+### Stretch Goal  
+ * 0
 
 Add log in for users to "collect" fish 
 
