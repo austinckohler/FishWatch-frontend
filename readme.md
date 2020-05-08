@@ -10,6 +10,10 @@ The free and public API we utilized, https://www.fishwatch.gov/api/species, has 
 
 This project was created by students from The Flatiron School - Denver for Module 2 of the Immersive Software Engineering Program.
 
+## Video Walk Through
+
+- https://youtu.be/FEuaymRlid0 
+
 ## Installation
 This website can currently only be accessed from a local environment. Please fork and clone this repository for the front-end, as well as the back-end repository:
 
