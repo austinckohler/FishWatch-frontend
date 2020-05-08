@@ -32,7 +32,6 @@ Create New Fish
 Search all fish for filtered results
 
 ### Stretch Goal  
- * 0
 
 Add log in for users to "collect" fish 
 
