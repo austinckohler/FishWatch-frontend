@@ -39,6 +39,9 @@ Search all fish for filtered results
 
 Add log in for users to "collect" fish 
 
+## Blog Post on this Project:
+https://medium.com/@kathrynlael/html-forms-post-method-and-search-e2d4ff92abbe
+
 ## Developers
 
 - Katie Clark: https://github.com/kathryn0908
